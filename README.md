@@ -9,10 +9,10 @@ The goal is to create a Golang program that loads the .csv file into memory, pro
 - For a given year, identify which players were active.
 
 ## Instructions
-1. Download the "ODI Data.csv" file from [Kaggle](https://www.kaggle.com/datasets/mahendran1/icc-cricket/data).
-2. Write a Golang program that loads the CSV data into memory and serves a JSON REST API locally.
-3. Implement API endpoints to handle queries for player analysis based on career end year and active players in a given year.
-4. Include proper documentation and tests within your solution.
+1. **Download the "ODI Data.csv" file from [Kaggle](https://www.kaggle.com/datasets/mahendran1/icc-cricket/data)**.
+2. **Write a Golang program** that loads the CSV data into memory and serves a JSON REST API locally.
+3. **Implement API endpoints** to handle queries for player analysis based on career end year and active players in a given year.
+4. **Include proper documentation and tests** within your solution.
 
 ### File Structure
 - main.go            // Main application entry point
@@ -29,8 +29,6 @@ The goal is to create a Golang program that loads the .csv file into memory, pro
 - tests/             // Folder for additional test files
 - README.md          // Instructions and details
 
-
-
 ## Implementation Details
 - The Golang program should utilize CSV parsing to load data from "ODI Data.csv".
 - Implement API endpoints to handle queries for player analysis based on the specified requirements.
@@ -38,24 +36,21 @@ The goal is to create a Golang program that loads the .csv file into memory, pro
 - Document the API endpoints, their functionality, input/output formats, and examples.
 
 ## Running the Program
-1. Clone or Download the Repository: Obtain the source code by either cloning the repository or downloading it as a ZIP file.
-2. Initialize the Go Module: If your project is not yet a Go module, initialize it using the following command in your project directory:
-
-``` bash
-  go mod init yourmodulepath
-```
+1. **Clone or Download the Repository**: Obtain the source code by either cloning the repository or downloading it as a ZIP file.
+2. **Initialize the Go Module**: If your project is not yet a Go module, initialize it using the following command in your project directory:
+  ```bash
+   go mod init yourmodulepath
+  ```
 Replace yourmodulepath with the module path you desire.
 
-3. Install Dependencies: If the project contains external dependencies, ensure they are imported using:
-
-```bash
-go mod tidy
-```
-4. Run the Application: Use the go run command to execute the main Go file (main.go in this case):
-
-```bash
-go run main.go
-```
+3. **Install Dependencies**: If the project contains external dependencies, ensure they are imported using:
+  ```bash
+  go mod tidy
+  ```
+4. **Run the Application**: Use the go run command to execute the main Go file (main.go in this case):
+  ```bash
+  go run main.go
+  ```
 
 ## API Endpoints
 ### `GET /players/most_runs?year={year}`
@@ -71,5 +66,12 @@ go run main.go
 - **Example**: `/players/active?year=2000`
 
 ## Testing
-- Include comprehensive tests covering edge cases, API endpoints, and data loading functionalities.
-- Ensure test coverage and reliability of the codebase.
+- **Handler Tests**: Run the handler tests using the command:
+  ```bash
+  go test ./handler
+  ```
+
+- **Overall Tests**: TTo run all test files from the project directory, execute:
+  ```bash
+  go test ./...
+  ```
